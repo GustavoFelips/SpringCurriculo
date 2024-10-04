@@ -22,10 +22,6 @@ public class Formacao {
     private LocalDate dataInicio;
     private LocalDate dataFim;
 
-    @ManyToOne
-    @JoinColumn(name = "curriculo_id")
-    private Curriculo curriculo;
-
     public Long getId() {
         return id;
     }
@@ -72,13 +68,5 @@ public class Formacao {
 
     public void setDataFim(LocalDate dataFim) {
         this.dataFim = dataFim;
-    }
-
-    public Curriculo getCurriculo() {
-        return curriculo; // Adicione este método
-    }
-
-    public void setCurriculo(Curriculo curriculo) { // Adicione este método
-        this.curriculo = curriculo;
     }
 }
