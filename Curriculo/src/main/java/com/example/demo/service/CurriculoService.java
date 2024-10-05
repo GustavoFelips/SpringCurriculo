@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.example.demo.model.Curriculo;
 import com.example.demo.repository.CurriculoRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class CurriculoService {
 
@@ -27,6 +29,7 @@ public class CurriculoService {
         return curriculoRepository.findById(id).orElseThrow(() -> new RuntimeException("Currículo não encontrado!"));
     }
 
+    @Transactional
     public Curriculo atualizarCurriculo(Long id, Curriculo curriculoAtualizado) {
         Curriculo curriculo = buscarPorId(id);
         curriculo.setNome(curriculoAtualizado.getNome());
