@@ -36,13 +36,12 @@ public class CurriculoService {
         curriculo.setTelefone(curriculoAtualizado.getTelefone());
         curriculo.setEmail(curriculoAtualizado.getEmail());
         curriculo.setObjetivo(curriculoAtualizado.getObjetivo());
-        curriculo.setFormacoes(curriculoAtualizado.getFormacoes());
-
+        curriculo.setApresentacao(curriculoAtualizado.getApresentacao());
         curriculo.getExperiencias().clear();
         curriculo.getExperiencias().addAll(curriculoAtualizado.getExperiencias());
-
+        // curriculo.setFormacoes(curriculoAtualizado.getFormacoes());
         //curriculo.setHabilidades(curriculoAtualizado.getHabilidades());
-        //curriculo.setApresentacao(curriculoAtualizado.getApresentacao());
+
         
         return curriculoRepository.save(curriculo);
     }
