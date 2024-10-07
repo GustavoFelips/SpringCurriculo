@@ -37,7 +37,10 @@ public class CurriculoService {
         curriculo.setEmail(curriculoAtualizado.getEmail());
         curriculo.setObjetivo(curriculoAtualizado.getObjetivo());
         curriculo.setFormacoes(curriculoAtualizado.getFormacoes());
-        curriculo.setExperiencias(curriculoAtualizado.getExperiencias());
+
+        curriculo.getExperiencias().clear();
+        curriculo.getExperiencias().addAll(curriculoAtualizado.getExperiencias());
+
         //curriculo.setHabilidades(curriculoAtualizado.getHabilidades());
         //curriculo.setApresentacao(curriculoAtualizado.getApresentacao());
         
